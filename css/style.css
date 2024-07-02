@@ -1,0 +1,14 @@
+@font-face {
+    font-family: heading_bangla_font;
+    src: url('../fonts/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: paragraph_bangla_font;
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+}
+.font-heding{
+    font-family: heading_bangla_font;
+}
+.font-paragraph{
+    font-family: paragraph_bangla_font;
+}
