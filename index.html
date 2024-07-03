@@ -1,5 +1,11 @@
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <style type="text/css">
       body,
       html {
@@ -7,35 +13,38 @@
         padding: 0;
       }
       body {
-        color: black;
         background-color: rgb(202, 148, 148);
         display: table;
-        font-family: Georgia, serif;
-        text-align: center;
+      }
+      .fonts {
+        font-family: "Libre Caslon Text", serif;
+        font-weight: 500;
+        font-style: normal;
       }
       .container {
-        border: 3px solid black;
-        /* padding: 40px; */
-        width: 700px;
-        height: 100%;
-        background-color: white;
-        /* display: table-cell; */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        width: 793px; /* A4 width */
+        height: 297mm; /* A4 height */
+        padding: 20mm;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
+        position: absolute;
+        box-sizing: border-box;
       }
-      @font-face {
-        font-family: english_font;
-        src: url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype");
-      }
-      .font-paragraph {
-        font-family: english_font;
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 15mm;
+        left: 15mm;
+        right: 15mm;
+        bottom: 15mm;
+        border: 5px solid black;
+        pointer-events: none;
+        box-sizing: border-box;
       }
       .person {
         border-bottom: 2px solid black;
-        font-size: 30px;
+        font-size: 50px;
         font-style: italic;
         margin: 20px auto;
         width: 500px;
@@ -47,72 +56,75 @@
         width: 210px;
         text-align: left;
       }
-      .reason {
-        margin: 20px;
-      }
-      .details {
-        margin-bottom: 30px;
-        text-align: justify;
-      }
-      .grade {
-        margin-top: 40px;
-        text-align: justify;
+      p {
+        line-height: 1.5;
+        letter-spacing: 1px;
       }
       .img1 {
-        top: 0;
-        left: 0;
+        top: 5px;
+        left: 5px;
         position: absolute;
-        width: 45%;
-        height: 15%;
+        width: 400px;
+        height: 150px;
+        transform: rotate(1deg);
+        /* transform-origin: 40% 70%; */
       }
       .img2 {
-        margin-top: 0%;
         bottom: 0;
         right: 0;
         position: absolute;
-        width: 45%;
-        height: 15%;
+        width: 400px;
+        height: 150px;
+        transform: rotate(-180deg);
+        transform-origin: 30% 40%;
       }
     </style>
   </head>
   <body>
-    <div class="container"
-      style="border: 2px solid black;
-             width: 90%;
-             height: 90%; "
-    >
-      <!-- <img class="img1" src="" alt="" /> -->
-      <div class="first-part">
-        <img class="logo"
-        style="height: 140px;
-               width: 140px; "
-        src="img/ib-logo.png" alt="Rayhan's_img" />
+    <section class="container">
+        <div>
+          <img class="img1" src="img/ib-corner-logo.png" alt="" />
+          <div>
+            <img
+              style="height: 230px; width: 280px"
+              src="img/ib-logo.png"
+              alt="Rayhan's_img"
+            />
+          </div>
+          <div>
+            <p
+              class="fonts"
+              style="font-size: 60px; 
+              font-weight: bold; 
+              letter-spacing: 3px;"
+            >
+              Certificate
+            </p>
+            <p>of Participation</p>
+            <p class="assignment">presented to</p>
 
-        <p class="font-paragraph"
-          style="
-              font-size: 50px;
-              font-weight: bold;
-          ">Certificate </p>
-        <p>of Participation</p>
-        <p class="assignment">presented to</p>
-
-        <p class="person">Joe Nathan</p>
-        <span>Id: </span>
-      </div>
-
-      <div class="reason">
-        <p class="details">
-          This is to certify than Hridoy khan son of md ibarahim khalil for has successfully completed the for this active individual participation during the conduct of 6 month industrial attachment one “ BIM Professional Architecture and interior design” course with grade A From Interior Bangladesh held on 01 July 2024 to 30 December 2024 .
-        </p>
-        <p class="grade">
-          His/Her Grade was A+ at under the Rayhan's ICT Limited.
-        </p>
-        <p class="signature">
-          Chief Executive Officer <br />
-          Date:...................
-        </p>
-      </div>
-      <!-- <img class="img2" src="" alt="" /> -->
-    </div>
+            <p class="person">Joe Nathan</p>
+            <span>Id: </span>
+          </div>
+          <div class="reason" style="text-align: center; padding: 5%">
+            <p class="details fonts" style="text-align: left">
+              This is to certify than <b style="color: black;opacity: .8;"> Hridoy khan </b> son of <b style="color: black;opacity: .8;"> md ibarahim khalil </b> for
+              has successfully completed the for this active individual
+              participation during the conduct of 6 month industrial attachment
+              one “ BIM Professional Architecture and interior design” course
+              with grade A From Interior Bangladesh held on 01 July 2024 to 30
+              December 2024 .
+            </p>
+            <p class="grade fonts" style="text-align: left">
+              His/Her Grade was A+ at under the Rayhan's ICT Limited.
+            </p>
+            <p class="signature fonts" style="text-align: left">
+              Chief Executive Officer <br />
+              Date:...................
+            </p>
+          </div>
+          <img class="img2" src="img/ib-corner-logo.png" alt="" />
+        </div>
+    </section>
   </body>
 </html>
