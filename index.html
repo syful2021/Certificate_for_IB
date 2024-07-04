@@ -13,7 +13,7 @@
         padding: 0;
       }
       body {
-        background-color: rgb(202, 148, 148);
+        /* background-color: rgb(202, 148, 148); */
         display: table;
       }
       .fonts {
@@ -42,13 +42,6 @@
         pointer-events: none;
         box-sizing: border-box;
       }
-      .person {
-        border-bottom: 2px solid black;
-        font-size: 50px;
-        font-style: italic;
-        margin: 20px auto;
-        width: 500px;
-      }
       .signature {
         border-top: 2px solid black;
         font-size: 16px;
@@ -59,6 +52,7 @@
       p {
         line-height: 1.5;
         letter-spacing: 1px;
+        text-align: left;
       }
       .img1 {
         top: 5px;
@@ -67,7 +61,7 @@
         width: 400px;
         height: 150px;
         transform: rotate(1deg);
-        /* transform-origin: 40% 70%; */
+        transform-origin: 100% 70%;  
       }
       .img2 {
         bottom: 0;
@@ -82,29 +76,48 @@
   </head>
   <body>
     <section class="container">
-        <div>
-          <img class="img1" src="img/ib-corner-logo.png" alt="" />
+      <!-- <img class="img1" src="img/ib-corner-logo.png" alt="" /> -->
+      <div>
           <div>
             <img
-              style="height: 230px; width: 280px"
+              style="height: 80px;
+               width: 200px;
+               margin-top: 20px;
+               margin-bottom: 30px;"
               src="img/ib-logo.png"
               alt="Rayhan's_img"
             />
           </div>
           <div>
-            <p
+            <h1
               class="fonts"
               style="font-size: 60px; 
-              font-weight: bold; 
-              letter-spacing: 3px;"
+              font-weight: 700; 
+              letter-spacing: 3px;
+              margin: 0;
+              text-transform: uppercase;
+              letter-spacing: 5px;"
             >
               Certificate
-            </p>
-            <p>of Participation</p>
-            <p class="assignment">presented to</p>
+          </h1>
+            <h3 style="font-size: 30px;
+                      margin: 0;
+                      font-weight: 500;
+                      text-transform: uppercase;
+                      letter-spacing: 5px;">
+            of Participation</h3>
+            <p style="text-align: center;">presented to</p>
 
-            <p class="person">Joe Nathan</p>
-            <span>Id: </span>
+
+            <h1 class="person" 
+                style="border-bottom: 2px solid black;
+                      font-size: 50px;
+                      font-style: italic;
+                      margin: 20px auto;
+                      margin-bottom: 0;
+                      width: 500px;">
+                      Joe Nathan</h1>
+            <h5 style="margin-top: 5px;">ID: </h5>
           </div>
           <div class="reason" style="text-align: center; padding: 5%">
             <p class="details fonts" style="text-align: left">
@@ -123,7 +136,7 @@
               Date:...................
             </p>
           </div>
-          <img class="img2" src="img/ib-corner-logo.png" alt="" />
+          <!-- <img class="img2" src="img/ib-corner-logo.png" alt="" /> -->
         </div>
     </section>
   </body>
